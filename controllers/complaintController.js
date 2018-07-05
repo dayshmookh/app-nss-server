@@ -2,7 +2,7 @@ var Complaint = require('../models/complaint');
 var fs = require('fs');
 var mime = require('mime');
 var multer = require('multer');
-var URL = require('url');
+var url = require('url');
 
 // Handle Complaint create on POST.
 exports.complaint_create_post = function (req, res) {
