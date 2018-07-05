@@ -47,7 +47,7 @@ exports.complaint_create_post = function (req, res) {
                 }
 
 
-                var sourceurl = new URL(req.headers.referer);
+                var sourceurl = new url.URL(req.headers.referer);
 
                 res.redirect(sourceurl.origin + '/done.html');
                 fs.unlink(req.files[0].path, function (err) {
