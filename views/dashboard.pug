@@ -18,9 +18,9 @@ html
                             each complaint in complaints
                                 div.collection-item
                                     if !complaint.status
-                                        a(href='javascript:viewcomplaint("'+complaint._id+'")') #{complaint.location}                                    
+                                        a(href='javascript:viewcomplaint("'+complaint._id+'")') Location: #{complaint.location}                                    
                                     else
-                                        a.grey-text(href='javascript:viewcomplaint("'+complaint._id+'")') #{complaint.location}                                    
+                                        a.grey-text(href='javascript:viewcomplaint("'+complaint._id+'")') Location: #{complaint.location}                                    
 
                                     
                                     .right
@@ -46,7 +46,7 @@ html
                         img.col.s12.m6.push-m3.materialboxed.light#complaint-img(alt="image")
 
                     .row
-                        .col.s8.grey-text#complaint-location
+                        h4.light.col.s8#complaint-location
                         .col.s4.grey-text#complaint-date
 
                     .row
