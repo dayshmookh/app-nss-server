@@ -6,7 +6,7 @@ var Schema = mongoose.Schema;
 var ComplaintSchema = new Schema({
     location: {
         type: String,
-        //required: true,
+        required: true,
         max: 100,
         default: 'unknown'
     },
@@ -17,7 +17,7 @@ var ComplaintSchema = new Schema({
     },
     status: {
         type: Boolean,
-        //required: true,
+        required: true,
         default: false
     },
     image: {
