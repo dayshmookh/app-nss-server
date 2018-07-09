@@ -2,7 +2,7 @@ var Complaint = require('../models/complaint');
 var fs = require('fs');
 var mime = require('mime');
 var multer = require('multer');
-var url = require('url');
+//var url = require('url');
 
 // Handle Complaint create on POST.
 exports.complaint_create_post = function (req, res) {
@@ -46,10 +46,18 @@ exports.complaint_create_post = function (req, res) {
                     throw err;
                 }
 
-                console.log(req.headers.referer);
-                var sourceurl = new url.URL(req.headers.referer);
+                //console.log(req.files);
+                /*
+                                var sourceurl = new url.URL(req.headers.referer);
 
-                res.redirect(sourceurl.origin + '/done.html');
+                                res.redirect(sourceurl.origin + '/done.html'); */
+
+                res.send(true);
+
+                // res.sendFile(__dirname + '/../www/done.html');
+
+                //res.redirect('/done.html');
+
                 fs.unlink(req.files[0].path, function (err) {
                     if (err) {
                         throw err;
