@@ -93,5 +93,25 @@ router.get('/complaint/image/:id', complaint_controller.complaint_image_get);
 
 router.post('/complaints/all/delete', complaint_controller.complaint_delete_all_post);
 
+
+
+
+
+
+
+
+var blog_controller = require('./controllers/blogController');
+
+/// BLOG ROUTES ///
+
+// POST request for creating blog post.
+router.post('/blog/create', blog_controller.blog_create_get);
+
+// GET request for viewing posts.
+router.get('/blog/all', blog_controller.blog_all_get);
+
+
+
+
 //export this router to use in our index.js
 module.exports = router;
