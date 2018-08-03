@@ -105,7 +105,7 @@ var blog_controller = require('./controllers/blogController');
 /// BLOG ROUTES ///
 
 // POST request for creating blog post.
-router.post('/blog/create', blog_controller.blog_create_get);
+router.post('/blog/create', blog_controller.blog_create_post);
 
 // GET request for viewing posts.
 router.get('/blog/all', blog_controller.blog_all_get);
