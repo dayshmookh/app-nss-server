@@ -111,7 +111,7 @@ router.post('/blog/create', blog_controller.blog_create_post);
 router.get('/blog/all', blog_controller.blog_all_get);
 
 // GET request for deleting posts.
-router.get('/complaints/all/delete', blog_controller.blog_delete_all_get);
+router.get('/blog/all/delete', blog_controller.blog_delete_all_get);
 
 
 
