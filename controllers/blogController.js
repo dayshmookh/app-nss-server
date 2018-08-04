@@ -30,3 +30,15 @@ exports.blog_all_get = function (req, res) {
             res.send(list_blogs);
         });
 };
+
+exports.blog_delete_all_get = function (req, res) {
+    Blog.deleteMany({})
+        .exec(function (err) {
+            if (err) {
+                res.send(false);
+                throw err;
+            }
+
+            res.send(true);
+        });
+};
